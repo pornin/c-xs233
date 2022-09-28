@@ -1,4 +1,4 @@
-# xsb233 and xsk233 Group Implementation
+# xsb233 and xsk233 Groups
 
 This is a demonstration C implementation of the xsb233 and xsk233
 groups. These are prime order groups isomorphic to subgroups of the
@@ -12,7 +12,7 @@ have order r and r', respectively. Groups xsb233 and xsk233 are deemed
 to be safe for constructing cryptographic protocols, with a security
 level of (at least) 112 bits.
 
-For each group, functions for encoding/decoding, comparing, addition,
+For each group, functions for encoding/decoding, comparison, addition,
 subtraction, negation, doubling and multiplication by a scalar (both for
 the conventional generator, and for a dynamically obtained element) are
 provided. Some highlights:
@@ -69,7 +69,7 @@ disabled), the following performance is achieved (in clock cycles):
 | :------------------------ | ---------: | ---------: |
 | mul                       |      60621 |      49378 |
 | mul (ladder)              |      51537 |      46365 |
-| mul (endomorphism)        |          - |      29602 |
+| mul (endomorphism)        |          - |  **29602** |
 | mulgen                    |      25754 |      20084 |
 | mulgen (endomorphism)     |          - |      16546 |
 
