@@ -526,9 +526,9 @@ xsk233_mul_ladder(xsk233_point *p3,
 	 *   Z3 = sqrt(b)*(X1*X2 + Z1*Z2)^2
 	 *
 	 *   X4 = (X1*Z1)^2
-	 *   Z4 = sqrt(b)*(X + Z)^4
+	 *   Z4 = sqrt(b)*(X1 + Z1)^4
 	 *
-	 * Which can be computed in a total of 5M + 4S + 2mb. The
+	 * which can be computed in a total of 5M + 4S + 2mb. The
 	 * original López-Dahab formulas have cost 5M + 4S + 1mb, which
 	 * is better by one multiplication by the constant sqrt(b);
 	 * however, on xsk233, sqrt(b) = 1, so that difference
